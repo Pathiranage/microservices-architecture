@@ -1,0 +1,31 @@
+#Uesr server port
+server:
+  port: 9001
+
+spring:
+  application:
+    name: api-gateway
+
+#Zuul Routes
+zuul:
+  prefix: /api/v1
+  routes:
+    product-service:
+      path: /product-service/**
+      serviceId: product-service
+#      url: http://localhost:9002
+    order-service:
+      path: /order-service/**
+      serviceId: order-service
+#      url: http://localhost:9003
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled: false

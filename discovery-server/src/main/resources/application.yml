@@ -1,0 +1,17 @@
+
+# Configure this Discovery Server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#    client: #Not a client
+#      registerWithEureka: false
+#      fetchRegistry: false
+
+# HTTP Server
+server:
+  port: 9000

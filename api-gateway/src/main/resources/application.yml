@@ -13,19 +13,24 @@ zuul:
     product-service:
       path: /product-service/**
       serviceId: product-service
-#      url: http://localhost:9002
+      url: http://10.15.90.101:9002
     order-service:
       path: /order-service/**
       serviceId: order-service
-#      url: http://localhost:9003
+    search-service:
+      path: /search-service/**
+      serviceId: search-service
+    cart-service:
+      path: /cart-service/**
+      serviceId: cart-service
 
 # Discovery Server Access
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9000/eureka/
+      defaultZone: http://10.15.90.101:9000/eureka/
 
-# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+# Disable Spring Boot's "Whitelabel" default error page,
 error:
   whitelabel:
     enabled: false

@@ -2,7 +2,7 @@
 # Service registers under this name
 spring:
   application:
-    name: order-service
+    name: cart-service
 
 # Discovery Server Access
 eureka:
@@ -21,4 +21,3 @@ server:
 error:
   whitelabel:
     enabled: false
-

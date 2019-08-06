@@ -1,17 +1,22 @@
-
 # Configure this Discovery Server
 eureka:
   instance:
     hostname: localhost
   client:
+    #    healthcheck:
+    #      enabled: true
+    #    statusPageUrlPath: ${server.servletPath}/info
+    #    healthCheckUrlPath: http://${eureka.instance.hostname}:${server.port}/health
     registerWithEureka: false
     fetchRegistry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-#    client: #Not a client
-#      registerWithEureka: false
-#      fetchRegistry: false
+
 
 # HTTP Server
 server:
   port: 9000
+#Spring
+spring:
+  application:
+    name: eureka-discovery

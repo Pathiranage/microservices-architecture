@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="product-service" />
+        <module name="cart-service" />
+        <module name="order-service" />
         <module name="api-gateway" />
         <module name="discovery-server" />
-        <module name="order-service" />
-        <module name="product-service" />
+        <module name="search-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,10 +23,12 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="auth-service" options="-parameters" />
+      <module name="cart-service" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
       <module name="microservices-architecture" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
+      <module name="search-service" options="-parameters" />
     </option>
   </component>
 </project>
